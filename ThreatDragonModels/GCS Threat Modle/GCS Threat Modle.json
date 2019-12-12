@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "title": "GCS Threat Modle",
+    "owner": "paul burnet",
+    "description": "Google Cloud Storage Bucket"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "reviewer": "ryan aldred"
+  }
+}
