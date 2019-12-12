@@ -57,23 +57,49 @@
               },
               "position": {
                 "x": 467,
-                "y": 208
+                "y": 209
               },
               "angle": 0,
               "id": "5307b517-4fea-418d-94d2-e809ff940a8b",
               "z": 2,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic tampering threat"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic repudiation threat"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "A generic information disclosure threat"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "GCS Bucket"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -86,7 +112,12 @@
               "target": {
                 "id": "5307b517-4fea-418d-94d2-e809ff940a8b"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 431,
+                  "y": 219
+                }
+              ],
               "id": "e86526b8-c469-4bd0-8bcf-a32d746c0f2f",
               "z": 3,
               "attrs": {}
