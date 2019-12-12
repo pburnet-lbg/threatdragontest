@@ -10,7 +10,132 @@
       {
         "title": "GCS_Threat_model",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 148,
+                "y": 123
+              },
+              "angle": 0,
+              "id": "3d3e81b3-31a5-4bf8-89d3-92c0dd6b4ee9",
+              "z": 1,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "User can access bucket if it is publically exposed",
+                  "type": "Elevation of privilege",
+                  "description": "user can get ot unauthorised data if the bucket is pubically available",
+                  "mitigation": "gcp:5.1  do not allow buckets to be public\ngcp:5.2 encrypte buckets with CMEK"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "External User"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 467,
+                "y": 208
+              },
+              "angle": 0,
+              "id": "5307b517-4fea-418d-94d2-e809ff940a8b",
+              "z": 2,
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "GCS Bucket"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "id": "3d3e81b3-31a5-4bf8-89d3-92c0dd6b4ee9"
+              },
+              "target": {
+                "id": "5307b517-4fea-418d-94d2-e809ff940a8b"
+              },
+              "vertices": [],
+              "id": "e86526b8-c469-4bd0-8bcf-a32d746c0f2f",
+              "z": 3,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "3d3e81b3-31a5-4bf8-89d3-92c0dd6b4ee9"
+              },
+              "target": {
+                "id": "5307b517-4fea-418d-94d2-e809ff940a8b"
+              },
+              "vertices": [
+                {
+                  "x": 469,
+                  "y": 80
+                }
+              ],
+              "id": "3cc9c000-595e-4d0c-b5d3-c3dc789590d1",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 3",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 916
+        }
       }
     ],
     "reviewer": "ryan aldred"
